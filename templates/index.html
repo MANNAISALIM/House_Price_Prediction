@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>House Price Prediction</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>House Price Prediction</h1>
+								<p>Modeling House Price Prediction using Regression Analysis developed by <a href="https://wcaprod.000webhostapp.com/index.html">MANNAI Salim</a><br />  you can
+								find source code on  <a href="https://github.com/MANNAISALIM/House_Price_Prediction">Github</a>.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Intro</a></li>
+								<li><a href="#work">Predict</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#contact">Contact</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Intro</h2>
+								<span class="image main"><img src="static/images/pic01.jpg" alt="" /></span>
+								<p>Thousands of houses are sold everyday. There are some questions every buyer asks himself like:
+									What is the actual price that this house deserves? Am I paying a fair price? In this paper, a machine
+									learning model is proposed to predict a house price based on data related to the house (its size,
+									the year it was built in, etc.). During the development and evaluation of our model, we will show
+									the code used for each step followed by its output. This will facilitate the reproducibility of our
+									work. In this study, Python programming language with a number of Python packages will be
+									used.</p>
+								<p>The main objectives of this study are as follows: <br>
+									• To apply data preprocessing and preparation techniques in order to obtain clean data
+									<br>• To build machine learning models able to predict house price based on house features
+									<br>• To analyze and compare models performance in order to choose the best model</p>
+							</article>
+
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Enter you house details</h2>
+								<form method="POST" , action="{{url_for('home')}}">
+									<input name="input-1" type="text" placeholder="longitude" required autofocus />
+									<br><input name="input-2" type="text" placeholder="latitude" required />
+									<br><input name="input-3" type="text" placeholder="housing median age" required />
+									<br><input name="input-4" type="text" placeholder="total rooms number" required autofocus />
+									<br><input name="input-5" type="text" placeholder="total bedrooms" required />
+									<br><input name="input-6" type="text" placeholder="population" required />
+									<br><input name="input-7" type="text" placeholder="households" required />
+									<br><input name="input-8" type="text" placeholder="median income" required />
+									<br><input name="input-9" type="text" placeholder="bedrooms per room" required />
+									<br><input name="input-10" type="text" placeholder="population per household" required />
+									<!--<br><input name="input-11" type="text" placeholder="ocena" required />
+									<br><input name="input-12" type="text" placeholder="ocena" required />
+									<br><input name="input-13" type="text" placeholder="ocena" required />
+									<br><input name="input-14" type="text" placeholder="ocena" required />
+									<br><input name="input-15" type="text" placeholder="ocena" required />-->
+									<br> <h4>Ocean proximity:</h4>
+									<input type="radio" id="input-11" name="input-11" value="1" >
+									<label for="input-11">NEAR BAY</label><br>
+									<input type="radio" id="input-12" name="input-11" value="2">
+									<label for="input-12">INLAND</label><br>
+									<input type="radio" id="input-13" name="input-11" value="3">
+									<label for="input-13"><1H OCEAN</label><br>
+									<input type="radio" id="input-14" name="input-11" value="4">
+									<label for="input-14">NEAR OCEAN</label><br>
+									<input type="radio" id="input-15" name="input-11" value="5">
+									<label for="input-15">ISLAND</label><br>
+									<!--<br><label >ocean proximity:</label>
+									<div class="col-lg-8 " >
+									<input type="radio" id="r1" name="input-9" value="NEAR BAY">
+									<label >NEAR BAY</label><br>
+									<input type="radio" id="r2" name="input-9" value="INLAND">
+									<label >INLAND</label><br>
+									<input type="radio" id="r3" name="input-9" value="<1H OCEAN">
+									<label ><1H OCEAN</label><br>
+									<input type="radio" id="r4" name="input-9" value="NEAR OCEAN">
+									<label >NEAR OCEAN</label><br>
+									<input type="radio" id="r5" name="input-9" value="ISLAND">
+									<label >OTHER</label><br></div>-->
+									<br><button type="submit">Predict your house price</button>
+
+								</form>
+							</article>
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image main"><img src="static/images/pic03.jpg" alt="" /></span>
+								<p>First, I started my journey with a Bachelor in Computer Science: Networks and Telecommunications, in Tunis. I then joined Higher institute of computer science and communication technologies in Sousse, where I specialized in the field of Computer Science And Telecommunications . I learned to program internally, but I had already participated in online development challenges, competitions around security, this is an area that attracted me very much.
+								</p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" disabled /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="https://www.linkedin.com/in/salim-mannai-251700151/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+									<li><a href="https://twitter.com/Mannaiselim1996" class="icon brands fa-twitter"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.facebook.com/mannai.selim.79" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/salimmannai96/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/MANNAISALIM" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Unamed Corporation 2020 </p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>
